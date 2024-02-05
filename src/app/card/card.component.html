@@ -1,0 +1,17 @@
+<div class="bg-white rounded-lg shadow-lg min-h-full flex flex-col justify-between">
+    <div>
+        <img class="w-full h-64 object-cover flex object-center rounded-t-lg" src="{{image}}" alt="food">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-orange-400">{{title}}</h2>
+            <p class="pt-3">
+                {{description}}
+            </p>
+        </div>
+    </div>
+    <div class="p-3 flex justify-end items-end">
+        @if(price > 0){
+            <a class="bg-orange-400 text-white p-3 font-bold rounded-lg hover:bg-orange-600">Add to cart: {{price}}€</a>
+        }
+    </div>
+</div>
+
