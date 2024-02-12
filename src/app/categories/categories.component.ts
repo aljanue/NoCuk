@@ -16,9 +16,9 @@ export class CategoriesComponent {
     this.showCategories = !this.showCategories;
   }
 
-  @Output() categorySelected = new EventEmitter<string>();
+  @Output() categorySelected = new EventEmitter<number>();
 
-  selectCategory(category: string) {
+  selectCategory(category: number) {
     this.categorySelected.emit(category);
   }
 }

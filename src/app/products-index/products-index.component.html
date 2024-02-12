@@ -1,4 +1,4 @@
 <div class="min-h-screen h-full min-w-full w-screen flex flex-wrap lg:flex-nowrap">
-<app-categories [categories]="categories"></app-categories>
-<app-products [products]="products"></app-products>
+<app-categories (categorySelected)="handleCategorySelected($event)" [categories]="categories"></app-categories>
+<app-products [products]="products" [selectedCategory]="selectedCategory"></app-products>
 </div>

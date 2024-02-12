@@ -40,5 +40,9 @@ export class ProductsIndexComponent {
     {id: 17, name: 'Cheesecake', categoryId: 5, img: '../../assets/images/cheesecake.jpg', price: 5.99, description:'Cheesecake with strawberries and whipped cream.'},
     {id: 18, name: 'Cannoli di Pistacchio', categoryId: 5, img: '../../assets/images/cannoli.jpg', price: 3.49, description:'Cannoli with pistachio and chocolate chips.'},
     {id: 19, name: 'Chocolate and Hazelnut Cake', categoryId: 5, img: '../../assets/images/choco-haz-cake.avif', price: 5.99, description:'Chocolate and hazelnut cake with a side of whipped cream.'}
-  ]
+  ];
+  handleCategorySelected(category: number) {
+    this.selectedCategory = category;
+  }
+  selectedCategory=0;
 }

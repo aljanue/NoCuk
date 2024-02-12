@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input,  } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { FormsModule } from '@angular/forms';
 
@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class ProductsComponent {
   @Input() products: any[] = [];
-
+  @Input() selectedCategory = 0;
   searchTerm = '';
   filteredProducts: any[] = [];
 
@@ -28,5 +28,7 @@ export class ProductsComponent {
         product.name.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
     }
+    console.log('soigñkusb');
   }
 }
+
