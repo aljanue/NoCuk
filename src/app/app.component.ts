@@ -6,10 +6,12 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsIndexComponent } from './products-index/products-index.component';
 import { LoginComponent } from './login/login.component';
+import { CartService } from './cart.service';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, CommonModule, NavbarComponent, FooterComponent, HomeComponent, ProductsIndexComponent, LoginComponent],
+  providers:[CartService],
   templateUrl: './app.component.html'
 })
 export class AppComponent {

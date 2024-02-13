@@ -1,10 +1,33 @@
-<div class="flex md:flex-col w-full h-screen bg-orange-100 items-center justify-center px-2 pr-6">
-    <form class="bg-orange-500 rounded-2xl p-8 lg:w-1/3 sm:w-1/2 w-full gap-5 flex flex-col shadow-md shadow-zinc-800">
-        <h1 class="text-center uppercase text-orange-50 font-bold text-3xl pb-5">Login</h1>
-        <input class="p-2 w-full rounded-xl" type="text" placeholder="Username">
-        <input class="p-2 w-full rounded-xl" type="password" placeholder="Password">
-        <button class="bg-orange-300 p-2 rounded-xl border-white border-2 text-white">Login</button>
-        <p class="text-orange-50">Don't have an account? <a class="underline text-white"href="#">Sign up</a></p>
-    </form>
+<div class="flex md:flex-row flex-col w-full md:h-screen  items-center justify-center">
+    <div class="md:w-1/2 w-full h-full md:bg-orange-100 bg-orange-500 flex items-center justify-center">
+        <form class="md:bg-orange-500 md:rounded-2xl p-8 sm:w-2/3 w-full gap-5 flex flex-col md:shadow-md md:shadow-zinc-800" #f="ngForm"(ngSubmit)="onSubmit(f)" validate>
+            <h1 class="text-center uppercase text-orange-50 font-bold text-3xl pb-5">Login</h1>
+            <input class="p-2 w-full rounded-xl" type="text" placeholder="Username" name="name" ngModel required>
+            <input class="p-2 w-full rounded-xl" type="password" placeholder="Password" name="password" ngModel required>
+            @if(loginInvalid == -1){
+                <p class="text-red-200">Invalid username or password</p>
+            }
+            <button class="bg-orange-300 p-2 rounded-xl border-white border-2 text-white" type="submit">Login</button>
+            <p class="text-orange-50">Don't have an account? <a class="underline text-white"href="#">Sign up</a></p>
+        </form>
+    </div>
+    <div class="md:w-1/2 w-full h-full flex items-center justify-center flex-col bg-orange-500 pr-5">
+        <h2 class="font-bold text-white text-3xl">Or sign in with:</h2>
+        <ul class="flex flex-col gap-3 p-5 w-full">
+            <li class="flex items-center justify-center gap-2 p-2 bg-orange-50 rounded-3xl border-2 border-black relative">
+                <img class="p-1 bg-white h-8 rounded-full absolute left-0 m-2" src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="">   
+                <div class="w-full flex items-center justify-center">Google</div> 
+                
+            </li>
+            <li class="flex items-center justify-center gap-2 p-2 bg-orange-50 rounded-3xl border-2 border-black relative">
+                <img class="bg-white h-8 rounded-full absolute left-0 m-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png" alt="">   
+                <div class="w-full flex items-center justify-center">Facebook</div> 
+            </li>
+            <li class="flex items-center justify-center gap-2 p-2 bg-orange-50 rounded-3xl border-2 border-black relative">
+                <img class="bg-white h-8 rounded-full absolute left-0 m-2" src="https://www.cintinez.com/wp-content/uploads/2015/10/logo-apple-ct.png" alt="">   
+                <div class="w-full flex items-center justify-center">Apple ID</div> 
+            </li>
+        </ul>
 
+    </div>
 </div>

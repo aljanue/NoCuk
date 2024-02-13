@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input,  } from '@angular/core';
+import { Component, Input, NgModule } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { FormsModule } from '@angular/forms';
 
@@ -18,6 +18,7 @@ export class ProductsComponent {
 
   ngOnChanges() {
     this.filteredProducts = this.products;
+
   }
 
   filterProducts() {
