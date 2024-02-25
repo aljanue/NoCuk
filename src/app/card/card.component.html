@@ -10,7 +10,7 @@
     </div>
     <div class="p-3 flex justify-end items-end">
         @if(price > 0){
-            <a class="bg-orange-400 text-white p-3 font-bold rounded-lg hover:bg-orange-600" (click)="addToCart(title, price, description, image)">Add to cart: {{price}}€</a>
+            <a class="bg-orange-400 text-white p-3 font-bold rounded-lg hover:bg-orange-600 hover:cursor-pointer" (click)="addToCart(title, price, description, image)">Add to cart: {{price}}€</a>
         }
     </div>
 </div>

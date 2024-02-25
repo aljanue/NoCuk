@@ -7,10 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { ProductsIndexComponent } from './products-index/products-index.component';
 import { LoginComponent } from './login/login.component';
 import { CartService } from './cart.service';
+import { CartComponent } from './cart/cart.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, NavbarComponent, FooterComponent, HomeComponent, ProductsIndexComponent, LoginComponent],
+  imports: [RouterOutlet, CommonModule, NavbarComponent, FooterComponent, HomeComponent, ProductsIndexComponent, LoginComponent, CartComponent],
   providers:[CartService],
   templateUrl: './app.component.html'
 })
