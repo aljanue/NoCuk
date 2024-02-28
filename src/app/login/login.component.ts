@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { LoginService } from '../login.service';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,12 +11,19 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  @Input() user: {name: string, password: string} = {name: 'aljanue', password: '1234'};
+  
   loginInvalid:number=0;
-
+  import=[RouterLink];
+  constructor(private _loginService: LoginService, private router: Router) { }
+  route = '';
+  ngOnInit(){
+    this.route = this._loginService.getRoute();
+  }
   onSubmit(f: NgForm) {
-    if (this.user.name === f.value.name && this.user.password === f.value.password) {
+    if (this._loginService.getUser().name === f.value.name && this._loginService.getUser().password === f.value.password) {
       this.loginInvalid = 1;
+      this._loginService.setLogged(true);
+      this.router.navigate([this.route]);
     } else {
       this.loginInvalid = -1;
     }
