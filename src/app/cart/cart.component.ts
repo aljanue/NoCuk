@@ -7,8 +7,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-cart',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './cart.component.html',
-  styleUrl: './cart.component.css'
+  templateUrl: './cart.component.html'
 })
 export class CartComponent {
   cartItems:any[] = [];

@@ -7,8 +7,7 @@ import { CategoriesComponent } from '../categories/categories.component';
   selector: 'app-products-index',
   standalone: true,
   imports: [CommonModule, ProductsComponent, CategoriesComponent],
-  templateUrl: './products-index.component.html',
-  styleUrl: './products-index.component.css'
+  templateUrl: './products-index.component.html'
 })
 export class ProductsIndexComponent {
   categories= [

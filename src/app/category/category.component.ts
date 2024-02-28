@@ -5,8 +5,7 @@ import { Component, Input } from '@angular/core';
   selector: 'app-category',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './category.component.html',
-  styleUrl: './category.component.css'
+  templateUrl: './category.component.html'
 })
 export class CategoryComponent {
   @Input() name='';

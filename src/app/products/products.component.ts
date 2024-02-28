@@ -7,8 +7,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-products',
   standalone: true,
   imports: [CommonModule, CardComponent, FormsModule],
-  templateUrl: './products.component.html',
-  styleUrl: './products.component.css'
+  templateUrl: './products.component.html'
 })
 export class ProductsComponent {
   @Input() products: any[] = [];
